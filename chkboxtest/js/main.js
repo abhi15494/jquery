@@ -32,14 +32,18 @@ $(document).ready(function(){
 
     function stringMake(i){
         var str = "";
-        if(returnCheckbox(i)){
-            str = 
-            `<h3>
-                ${i}). ${obj.text[i-1]}
-            </h3><br />`;
+        if(i < 0){
+            for(var i = 0; i < this.i; i++){
+                if(returnCheckbox(i)){
+                    str = 
+                    `<h3>
+                        ${i}). ${obj.text[i-1]}
+                    </h3><br />`;
+                }
+            }
         }
         else str = obj.noSelect;
-        return  
+        return str;
     }
     
     function sum(arr){
