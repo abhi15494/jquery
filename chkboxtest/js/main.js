@@ -32,13 +32,11 @@ $(document).ready(function(){
 
     function stringMake(i){
         var str = "";
-        if(i < 0){
-            for(var i = 0; i < this.i; i++){
+        if(i > 0){
+            for(var j = 0; j < i; j++){
                 if(returnCheckbox(i)){
-                    str = 
-                    `<h3>
-                        ${i}). ${obj.text[i-1]}
-                    </h3><br />`;
+                    str += "<h3>" + j + "}). " + obj.text[j] + "</h3><br />";
+                    console.log("tunna");
                 }
             }
         }
